@@ -8,6 +8,7 @@ import 'swiper/swiper-bundle.css';
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation } from "swiper/modules"
 import { Swiper as SwiperType } from "swiper"
+import Navbar from "./components/navbar/navbar-component"
 
 function App() {
 
@@ -22,10 +23,12 @@ function App() {
   };
 
   return (
-    <div className="p-2 sm:p-4 md:px-10 xl:px-15  flex justify-center flex-col gap-10" >
+    <div className="p-2 sm:p-4 md:px-10 xl:px-30  flex justify-between flex-col gap-10" >
+
+      <Navbar />
 
       {/* Seção de produtos */}
-      <div className="flex flex-wrap gap-3 sm:gap-5">
+      <div className="flex flex-wrap items-center justify-center md:justify-normal gap-3 sm:gap-5">
         {produtos.map(produto => (
           <CardProduto key={produto.id} produto={produto} />
         ))}
@@ -85,7 +88,6 @@ function App() {
           </Swiper>
         </div>
       </div>
-
 
     </div>
   )

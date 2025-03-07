@@ -55,7 +55,37 @@ export const produtos: IProduto[] = [
         },
         preco: 360,
         desconto: 0
-    }
+    },
+    {
+        id: "5",
+        nome: 'The north coat',
+        img: {
+            src: '/imagens/produtos/jaqueta-feminina.png',
+            alt: 'Jaqueta feminina'
+        },
+        preco: 360,
+        desconto: 0
+    },
+    {
+        id: "5",
+        nome: 'The north coat',
+        img: {
+            src: '/imagens/produtos/jaqueta-feminina.png',
+            alt: 'Jaqueta feminina'
+        },
+        preco: 360,
+        desconto: 0
+    },
+    {
+        id: "5",
+        nome: 'The north coat',
+        img: {
+            src: '/imagens/produtos/jaqueta-feminina.png',
+            alt: 'Jaqueta feminina'
+        },
+        preco: 360,
+        desconto: 0
+    },
 ] 
 
 export const categorias = [
