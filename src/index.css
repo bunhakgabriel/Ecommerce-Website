@@ -16,16 +16,7 @@
 
 body {
   margin: 0;
-  min-width: 320px;
   min-height: 100vh;
   height: 2000px;
 }
 
-.scrollbar-none::-webkit-scrollbar {
-  display: none;
-}
-
-.scrollbar-none {
-  -ms-overflow-style: none; /* IE e Edge */
-  scrollbar-width: none;    /* Firefox */
-}

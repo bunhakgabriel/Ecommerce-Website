@@ -3,7 +3,7 @@ interface TitleSectionProps {
 }
 
 function TitleSection({ title }: TitleSectionProps ){
-    return <h1 className="font-bold text-[28px]" >{title}</h1>
+    return <h1 className="font-bold text-md sm:text-xl md:text-2xl lg:text-3xl" >{title}</h1>
 }
 
 export default TitleSection;

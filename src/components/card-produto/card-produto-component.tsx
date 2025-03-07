@@ -25,8 +25,8 @@ function CardProduto({ produto }: CardProdutoProps) {
                     <img src={img.src} />
                 </div>
                 <div className="flex flex-col items-center w-[15%] gap-2 pt-5">
-                    <FaRegHeart size={20} className="cursor-pointer" />
-                    <MdOutlineRemoveRedEye size={25} className="cursor-pointer" />
+                    <FaRegHeart className="text-lg sm:text-xl cursor-pointer" />
+                    <MdOutlineRemoveRedEye className="text-xl sm:text-2xl cursor-pointer" />
                 </div>
             </div>
             <h2 className="font-medium" >{nome}</h2>

@@ -1,10 +1,9 @@
 import { IoIosPhonePortrait } from "react-icons/io";
 import { IProduto } from "./interfaces/IProduto";
-import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import { BsSmartwatch } from "react-icons/bs";
-import { MdOutlineCameraAlt } from "react-icons/md";
-import { LuHeadphones } from "react-icons/lu";
-import { IoGameControllerOutline } from "react-icons/io5";
+import { IoGameControllerOutline, IoHeadsetOutline } from "react-icons/io5";
+import { CiCamera, CiMonitor } from "react-icons/ci";
+import { PiGameControllerThin } from "react-icons/pi";
 
 export const produtos: IProduto[] = [
     {
@@ -62,34 +61,34 @@ export const produtos: IProduto[] = [
 export const categorias = [
     {
         title: 'Phones',
-        icon: <IoIosPhonePortrait size={100} />
+        icon: <IoIosPhonePortrait className="text-[40px] sm:text-[64px] md:text-[76px]" />
     },
     {
         title: 'Computers',
-        icon: <HiOutlineComputerDesktop size={100} />
+        icon: <CiMonitor className="text-[40px] sm:text-[64px] md:text-[76px]" />
     },
     {
         title: 'SmastWatch',
-        icon: <BsSmartwatch size={100} />
+        icon: <BsSmartwatch className="text-[40px] sm:text-[64px] md:text-[76px]" />
     },
     {
         title: 'Camera',
-        icon: <MdOutlineCameraAlt size={100} />
+        icon: <CiCamera className="text-[40px] sm:text-[64px] md:text-[76px]" />
     },
     {
         title: 'HeadPhones',
-        icon: <LuHeadphones size={100} />
+        icon: <IoHeadsetOutline className="text-[40px] sm:text-[64px] md:text-[76px]" />
     },
     {
         title: 'Gaming',
-        icon: <IoGameControllerOutline size={100} />
+        icon: <PiGameControllerThin className="text-[40px] sm:text-[64px] md:text-[76px]" />
     },
     {
         title: 'HeadPhones',
-        icon: <LuHeadphones size={100} />
+        icon: <IoHeadsetOutline className="text-[40px] sm:text-[64px] md:text-[76px]" />
     },
     {
         title: 'Gaming',
-        icon: <IoGameControllerOutline size={100} />
+        icon: <PiGameControllerThin className="text-[40px] sm:text-[64px] md:text-[76px]" />
     },
 ]
