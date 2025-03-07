@@ -1,7 +1,7 @@
 import { IoIosPhonePortrait } from "react-icons/io";
 import { IProduto } from "./interfaces/IProduto";
 import { BsSmartwatch } from "react-icons/bs";
-import { IoGameControllerOutline, IoHeadsetOutline } from "react-icons/io5";
+import { IoHeadsetOutline } from "react-icons/io5";
 import { CiCamera, CiMonitor } from "react-icons/ci";
 import { PiGameControllerThin } from "react-icons/pi";
 

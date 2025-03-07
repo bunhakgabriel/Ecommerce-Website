@@ -4,7 +4,7 @@ import CardProduto from "./components/card-produto/card-produto-component"
 import TagLabelTitle from "./components/tag-label-title/tag-label-title-component"
 import TitleSection from "./components/title-section/title-section-component"
 import { categorias, produtos } from "./dados"
-import 'swiper/css';
+import 'swiper/swiper-bundle.css';
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation } from "swiper/modules"
 import { Swiper as SwiperType } from "swiper"
