@@ -5,23 +5,23 @@ import calcularDescontoPercentual from "../../utils/calcular-desconto-percentual
 
 interface CardProdutoProps {
     produto: IProduto;
+    carrossel?: boolean;
 }
 
-function CardProduto({ produto }: CardProdutoProps) {
+function CardProduto({ produto, carrossel }: CardProdutoProps) {
 
-    const { nome, img, preco, desconto  } = produto
+    const { nome, img, preco, desconto } = produto
+    const classe = carrossel ? '' : 'w-[48%] sm:w-[32%] lg:w-[23%] text-xs sm:text-sm md:text-sm lg:text-lg';
 
     return (
-        <div className="w-[140px] flex flex-col gap-1 text-xs sm:w-[230px] sm:text-lg">
-            <div className="bg-[#FAFAFA] rounded-[4px] flex h-[150px] sm:h-[230px]">
+        <div className={`${classe} flex flex-col gap-1`}>
+            <div className="bg-[#FAFAFA] rounded-[4px] flex">
                 <div className="flex flex-col w-[85%] justify-center">
-                    {desconto != 0 && desconto && (
-                        <div className="w-full text-amber-50 p-2" >
-                            <span className="bg-[#FF0000] px-4 py-[2px] rounded-[4px]" >
-                                {calcularDescontoPercentual(preco, desconto)}
-                            </span>
-                        </div>
-                    )}
+                    <div className={`${desconto != 0 && desconto ? 'opacity-100' : 'opacity-0'} w-full text-amber-50 p-2`} >
+                        <span className="bg-[#FF0000] px-4 py-[2px] rounded-[4px]" >
+                            {calcularDescontoPercentual(preco, (desconto || 0))}
+                        </span>
+                    </div>
                     <img src={img.src} />
                 </div>
                 <div className="flex flex-col items-center w-[15%] gap-2 pt-5">
