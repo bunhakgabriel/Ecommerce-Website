@@ -1,11 +1,6 @@
-import { IoIosPhonePortrait } from "react-icons/io";
-import { IProduto } from "./interfaces/IProduto";
-import { BsSmartwatch } from "react-icons/bs";
-import { IoHeadsetOutline } from "react-icons/io5";
-import { CiCamera, CiMonitor } from "react-icons/ci";
-import { PiGameControllerThin } from "react-icons/pi";
+import { IProduto } from "../../interfaces/IProduto";
 
-export const produtos: IProduto[] = [
+export const produtosComDesconto: IProduto[] = [
     {
         id: "1",
         nome: 'HAVIT HV-G92 Gamepad',
@@ -87,38 +82,3 @@ export const produtos: IProduto[] = [
         desconto: 0
     },
 ] 
-
-export const categorias = [
-    {
-        title: 'Phones',
-        icon: <IoIosPhonePortrait className="text-[40px] sm:text-[64px] md:text-[76px]" />
-    },
-    {
-        title: 'Computers',
-        icon: <CiMonitor className="text-[40px] sm:text-[64px] md:text-[76px]" />
-    },
-    {
-        title: 'SmastWatch',
-        icon: <BsSmartwatch className="text-[40px] sm:text-[64px] md:text-[76px]" />
-    },
-    {
-        title: 'Camera',
-        icon: <CiCamera className="text-[40px] sm:text-[64px] md:text-[76px]" />
-    },
-    {
-        title: 'HeadPhones',
-        icon: <IoHeadsetOutline className="text-[40px] sm:text-[64px] md:text-[76px]" />
-    },
-    {
-        title: 'Gaming',
-        icon: <PiGameControllerThin className="text-[40px] sm:text-[64px] md:text-[76px]" />
-    },
-    {
-        title: 'HeadPhones',
-        icon: <IoHeadsetOutline className="text-[40px] sm:text-[64px] md:text-[76px]" />
-    },
-    {
-        title: 'Gaming',
-        icon: <PiGameControllerThin className="text-[40px] sm:text-[64px] md:text-[76px]" />
-    },
-]

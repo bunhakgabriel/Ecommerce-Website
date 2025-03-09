@@ -20,3 +20,24 @@ body {
   height: 2000px;
 }
 
+.py-section{
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 500px) {
+  .py-section{
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .py-section{
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .py-section{
+    padding-bottom: 90px;
+  }
+}

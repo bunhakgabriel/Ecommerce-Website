@@ -11,10 +11,10 @@ interface CardProdutoProps {
 function CardProduto({ produto, carrossel }: CardProdutoProps) {
 
     const { nome, img, preco, desconto } = produto
-    const classe = carrossel ? '' : 'w-[48%] sm:w-[32%] lg:w-[23%] text-xs sm:text-sm md:text-sm lg:text-lg';
+    const classe = carrossel ? '' : 'w-[48%] sm:w-[32%] lg:w-[23%]';
 
     return (
-        <div className={`${classe} flex flex-col gap-1`}>
+        <div className={`${classe} flex flex-col gap-1 text-xs sm:text-sm md:text-sm lg:text-lg`}>
             <div className="bg-[#FAFAFA] rounded-[4px] flex">
                 <div className="flex flex-col w-[85%] justify-center">
                     <div className={`${desconto != 0 && desconto ? 'opacity-100' : 'opacity-0'} w-full text-amber-50 p-2`} >
@@ -30,7 +30,7 @@ function CardProduto({ produto, carrossel }: CardProdutoProps) {
                 </div>
             </div>
             <h2 className="font-medium" >{nome}</h2>
-            <p className="font-medium flex gap-6">
+            <p className="font-medium flex gap-x-2 sm:gap-x-6 flex-wrap">
                 <span className="text-[#FF0000]" >R$ {(preco - (desconto || 0)).toFixed(2)}</span>
                 {desconto != 0 && desconto && (
                     <span className="text-[gray] line-through" >R${preco.toFixed(2)}</span>
