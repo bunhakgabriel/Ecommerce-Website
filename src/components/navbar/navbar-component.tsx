@@ -3,7 +3,7 @@ import { PiShoppingCartThin } from "react-icons/pi";
 
 function Navbar() {
     return (
-        <header className="flex justify-between items-center" >
+        <header className="w-full min-h-16 shadow-[0_2px_3px_rgba(0,0,0,0.2)] flex justify-between items-center fixed z-50 bg-white py-2 px-3 sm:p-4 md:px-10 xl:px-30" >
             <div>
                 <h1 className="font-medium text-xl md:text-2xl">Ecommerce</h1>
             </div>
