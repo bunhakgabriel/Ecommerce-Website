@@ -1,3 +1,9 @@
+import { FaApple } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { IoLogoGooglePlaystore } from "react-icons/io5";
+import { PiInstagramLogoLight } from "react-icons/pi";
+import { RiFacebookLine, RiLinkedinLine } from "react-icons/ri";
+
 function Rodape() {
     return (
         <footer>
@@ -37,18 +43,35 @@ function Rodape() {
                         <li className="cursor-pointer text-sm">Contact</li>
                     </ul>
                 </div>
-                <div className="flex flex-col gap-3 w-[200px] lg:w-[20%]">
+                <div className="flex flex-col gap-2 w-[220px] lg:w-[23%]">
                     <h2 className="font-medium text-xl">Download App</h2>
-                    <p className="text-xs">Save $3 with Ap p New User Only</p>
-                    <div>
-                        <div>QR CODE</div>
-                        <div>
-                            <div>PLAY STORE</div>
-                            <div>APP STORE</div>
+                    <p className="text-sm">Save $3 with Ap p New User Only</p>
+                    <div className="flex gap-2">
+                        <div className="w-[86px] h-[86px]">
+                            <img src='/imagens/diversas/qr-code.png' />
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <button className="border border-white rounded-md flex gap-2 items-center justify-center p-1">
+                                <IoLogoGooglePlaystore size={20} />
+                                <div className="flex flex-col items-start">
+                                    <span className="text-[9px]">GET IT ON</span>
+                                    <span className="font-medium text-xs">Google Play</span>
+                                </div>
+                            </button>
+                            <button className="border border-white rounded-md flex gap-2 items-center justify-center p-1">
+                                <FaApple size={20} />
+                                <div className="flex flex-col items-start">
+                                    <span className="text-[9px]">Download on the</span>
+                                    <span className="font-medium text-xs">App Store</span>
+                                </div>
+                            </button>
                         </div>
                     </div>
-                    <div>
-                        icones redes sociais
+                    <div className="flex gap-8 py-2">
+                        <RiFacebookLine size={20} />
+                        <FaXTwitter size={20} />
+                        <PiInstagramLogoLight size={20} />
+                        <RiLinkedinLine size={20} />
                     </div>
                 </div>
             </div>
