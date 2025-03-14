@@ -1,7 +1,12 @@
 import { BiUser } from "react-icons/bi";
+import { LuMenu } from "react-icons/lu";
 import { PiShoppingCartThin } from "react-icons/pi";
 
-function Navbar() {
+interface NavBarProps {
+    setMobileMenu: (value: boolean) => void
+}
+
+function Navbar({ setMobileMenu }: NavBarProps) {
     return (
         <header className="w-full min-h-16 shadow-[0_2px_3px_rgba(0,0,0,0.2)] flex justify-between items-center fixed z-50 bg-white py-2 px-3 sm:p-4 md:px-10 xl:px-30" >
             <div>
@@ -21,6 +26,9 @@ function Navbar() {
                 </div>
                 <div className="rounded-2xl p-1 bg-[#FF0000]">
                     <BiUser className="text-[white] md:text-xl cursor-pointer" />
+                </div>
+                <div className="sm:hidden">
+                    <LuMenu className="cursor-pointer text-3xl" onClick={() => setMobileMenu(true)}/>
                 </div>
             </div>
         </header>

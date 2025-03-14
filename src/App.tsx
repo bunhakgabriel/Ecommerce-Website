@@ -1,5 +1,4 @@
 import 'swiper/swiper-bundle.css';
-import Navbar from "./components/navbar/navbar-component"
 import Produtos from "./components/produtos/produtos-component"
 import { produtos1 } from "./components/produtos/dados"
 import Categorias from "./components/categorias/categorias-component";
@@ -7,13 +6,15 @@ import { categorias } from "./components/categorias/dados";
 import CarrosselProdutos from './components/carrossel-produtos/carrossel-produtos-component';
 import { produtosComDesconto } from './components/carrossel-produtos/dados';
 import Rodape from './components/rodape/rodape-component';
-import NavBarLateral from './components/navbar-lateral/navbar-lateral.component';
+import NavBarLateral from './components/menu/navbar-lateral/navbar-lateral.component';
+import Menu from './components/menu/navigation.component';
 
 function App() {
 
   return (
     <div style={{ position: 'relative' }}>
-      <Navbar />
+      <Menu />
+
       <div className="py-2 px-3 sm:p-4 md:px-10 xl:px-30 flex justify-between flex-col gap-10" >
         <div className='mt-10'></div>
 
