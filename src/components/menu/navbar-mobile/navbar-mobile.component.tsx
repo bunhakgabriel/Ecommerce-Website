@@ -9,7 +9,9 @@ interface NavBarMobileProps {
 function NavbarMobile({ mobileMenu, setMobileMenu }: NavBarMobileProps) {
     return (
         <>
-            <div className={`${mobileMenu ? 'translate-x-0' : 'transform -translate-x-full'} fixed z-50 w-full shadow-lg transition-transform duration-150 ease-in-out flex h-screen`}>
+            <div onClick={() => setMobileMenu(false)} className={`${mobileMenu ? 'opacity-50' : 'hidden'} bg-black fixed w-screen h-screen z-20`}>
+            </div>
+            <div className={`${mobileMenu ? 'translate-x-0' : 'transform -translate-x-full'} fixed z-30 w-full shadow-lg transition-transform duration-300 ease-in-out flex h-screen`}>
                 <div className="bg-white w-3/4">
                     <div className="p-4 border-b border-gray-200">
                         <div className="flex items-center justify-between">
@@ -40,8 +42,6 @@ function NavbarMobile({ mobileMenu, setMobileMenu }: NavBarMobileProps) {
                             </nav>
                         </div>
                     </div>
-                </div>
-                <div onClick={() => setMobileMenu(false)} className="bg-black opacity-50 w-1/4">
                 </div>
             </div>
         </>
