@@ -7,6 +7,7 @@ import { categorias } from "./components/categorias/dados";
 import CarrosselProdutos from './components/carrossel-produtos/carrossel-produtos-component';
 import { produtosComDesconto } from './components/carrossel-produtos/dados';
 import Rodape from './components/rodape/rodape-component';
+import NavBarLateral from './components/navbar-lateral/navbar-lateral.component';
 
 function App() {
 
@@ -15,6 +16,10 @@ function App() {
       <Navbar />
       <div className="py-2 px-3 sm:p-4 md:px-10 xl:px-30 flex justify-between flex-col gap-10" >
         <div className='mt-10'></div>
+
+        {/* Navegação lateral */}
+        <NavBarLateral />
+
         {/* Seção de produtos com desconto */}
         <CarrosselProdutos
           produtos={produtosComDesconto}
