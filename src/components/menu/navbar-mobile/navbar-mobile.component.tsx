@@ -1,5 +1,6 @@
 import { MdOutlineClose } from "react-icons/md";
 import { linksNavBarLateral } from "../navbar-lateral/dados";
+import { useEffect } from "react";
 
 interface NavBarMobileProps {
     setMobileMenu: (value: boolean) => void
@@ -7,17 +8,29 @@ interface NavBarMobileProps {
 }
 
 function NavbarMobile({ mobileMenu, setMobileMenu }: NavBarMobileProps) {
+
+    function handleMenu(){
+        setMobileMenu(false);
+        document.body.style.overflow = "";
+    }
+
+    useEffect(() => {
+        if(mobileMenu){
+            document.body.style.overflow = "hidden";
+        }
+    }, [mobileMenu]);
+
     return (
         <>
-            <div onClick={() => setMobileMenu(false)} className={`${mobileMenu ? 'opacity-50' : 'hidden'} bg-black fixed w-screen h-screen z-20`}>
+            <div onClick={handleMenu} className={`${mobileMenu ? 'opacity-50' : 'hidden'} bg-black fixed w-screen h-screen z-20`}>
             </div>
-            <div className={`${mobileMenu ? 'translate-x-0' : 'transform -translate-x-full'} fixed z-30 w-full shadow-lg transition-transform duration-300 ease-in-out flex h-screen`}>
+            <div className={`${mobileMenu ? 'translate-x-0' : 'transform -translate-x-full'} fixed z-30 w-full shadow-lg transition-transform duration-250 ease-in-out flex h-screen`}>
                 <div className="bg-white w-3/4">
                     <div className="p-4 border-b border-gray-200">
                         <div className="flex items-center justify-between">
                             <h2 className="text-xl font-bold">Menu</h2>
                             <button>
-                                <MdOutlineClose className="h-6 w-6 cursor-pointer" onClick={() => setMobileMenu(false)} />
+                                <MdOutlineClose className="h-6 w-6 cursor-pointer" onClick={handleMenu} />
                             </button>
                         </div>
                     </div>
