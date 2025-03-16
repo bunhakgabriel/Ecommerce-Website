@@ -12,6 +12,8 @@ import CarrosselBanners from './components/carrossel-banners/carrossel-banners-c
 import { banners } from './components/carrossel-banners/dados';
 import ButtonUi from './components/button-ui/button-ui-component';
 import SessaoBanner from './components/sessaoBanner/sessao-banner-component';
+import TagLabelTitle from './components/tag-label-title/tag-label-title-component';
+import TitleSection from './components/title-section/title-section-component';
 
 function App() {
 
@@ -75,88 +77,51 @@ function App() {
         </div>
 
         {/* Seção banner */}
-        <div className='mb-10 flex h-[180px] justify-between'>
-          <SessaoBanner
-            className='w-[48%] text-white'
-            title='PlayStation 5'
-            text='Black and White version of the PS5 coming out on sale.'
-            imagem={{
-              src: '/imagens/sessao-banner/ps5.png',
-              alt: 'Imagem playstation 5'
-            }}
-          />
-          <div className='w-[48%] flex flex-col justify-between'>
+        <div className='flex flex-col gap-2'>
+          <TagLabelTitle title='Featured' />
+          <TitleSection title='New Arrival' />
+          <div className='mb-10 flex justify-between flex-wrap gap-4 lg:max-h-[485px]'>
             <SessaoBanner
-              className='w-full h-[85px] text-white'
+              className='w-full sm:w-[48%] lg:max-h-[480px] text-white'
               title='PlayStation 5'
               text='Black and White version of the PS5 coming out on sale.'
               imagem={{
-                src: '/imagens/sessao-banner/Frame 685.png',
+                src: '/imagens/sessao-banner/ps5.png',
                 alt: 'Imagem playstation 5'
               }}
             />
-            <div className='flex justify-between h-[85px]'>
+            <div className='w-full sm:w-[48%] lg:w-1/2 flex flex-col justify-between gap-4'>
               <SessaoBanner
-                className='w-[48%] text-white'
-                title='PlayStation 5'
-                text='Black and White version of the PS5 coming out on sale.'
+                className='w-full lg:max-h-[230px] text-white'
+                title='Women’s Collections'
+                text='Featured woman collections that give you another vibe.'
                 imagem={{
-                  src: '/imagens/sessao-banner/Frame 686.png',
-                  alt: 'Imagem playstation 5'
+                  src: '/imagens/sessao-banner/Frame 685.png',
+                  alt: 'Imagem mulher de chapéu'
                 }}
               />
-              <SessaoBanner
-                className='w-[48%] text-white'
-                title='PlayStation 5'
-                text='Black and White version of the PS5 coming out on sale.'
-                imagem={{
-                  src: '/imagens/sessao-banner/Frame 687.png',
-                  alt: 'Imagem playstation 5'
-                }}
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className='mb-10 flex justify-between flex-wrap gap-4'>
-          <SessaoBanner
-            className='w-[100%] text-white'
-            title='PlayStation 5'
-            text='Black and White version of the PS5 coming out on sale.'
-            imagem={{
-              src: '/imagens/sessao-banner/ps5.png',
-              alt: 'Imagem playstation 5'
-            }}
-          />
-          <div className='w-full flex flex-col justify-between gap-4'>
-            <SessaoBanner
-              className='w-full text-white'
-              title='PlayStation 5'
-              text='Black and White version of the PS5 coming out on sale.'
-              imagem={{
-                src: '/imagens/sessao-banner/Frame 685.png',
-                alt: 'Imagem playstation 5'
-              }}
-            />
-            <div className='flex justify-between'>
-              <SessaoBanner
-                className='w-[48%] text-white'
-                title='PlayStation 5'
-                text='Black and White version of the PS5 coming out on sale.'
-                imagem={{
-                  src: '/imagens/sessao-banner/Frame 686.png',
-                  alt: 'Imagem playstation 5'
-                }}
-              />
-              <SessaoBanner
-                className='w-[48%] text-white'
-                title='PlayStation 5'
-                text='Black and White version of the PS5 coming out on sale.'
-                imagem={{
-                  src: '/imagens/sessao-banner/Frame 687.png',
-                  alt: 'Imagem playstation 5'
-                }}
-              />
+              <div className='flex justify-between'>
+                <SessaoBanner
+                  className='w-[48%] lg:max-h-[230px] text-white'
+                  title='Speakers'
+                  text='Amazon wireless speakers.'
+                  imagem={{
+                    src: '/imagens/sessao-banner/caixa-de-som-banner.png',
+                    alt: 'Imagem caixinhas de som portatil'
+                  }}
+                  sm
+                />
+                <SessaoBanner
+                  className='w-[48%] lg:max-h-[230px] text-white'
+                  title='Perfume'
+                  text='GUCCI INTENSE OUD EDP'
+                  imagem={{
+                    src: '/imagens/sessao-banner/perfume-sessao.png',
+                    alt: 'Imagem perfume'
+                  }}
+                  sm
+                />
+              </div>
             </div>
           </div>
         </div>
