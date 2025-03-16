@@ -82,3 +82,46 @@ export const produtos1: IProduto[] = [
         desconto: 0
     },
 ] 
+
+export const bestSellingProducts: IProduto[] = [
+    {
+        id: "1",
+        nome: 'The north coat',
+        img: {
+            src: '/imagens/produtos/jaqueta-feminina.png',
+            alt: 'Jaqueta feminina'
+        },
+        preco: 260,
+        desconto: 0
+    },
+    {
+        id: "2",
+        nome: 'Gucci duffle bag',
+        img: {
+            src: '/imagens/produtos/bolsa-feminina.png',
+            alt: 'Bolsa feminina'
+        },
+        preco: 960,
+        desconto: 0
+    },
+    {
+        id: "3",
+        nome: 'RGB liquid CPU Cooler',
+        img: {
+            src: '/imagens/produtos/caixa-som.png',
+            alt: 'Caixa de som'
+        },
+        preco: 160,
+        desconto: 0
+    },
+    {
+        id: "4",
+        nome: 'Small BookSelf',
+        img: {
+            src: '/imagens/produtos/mesinha.png',
+            alt: 'Criado mudo'
+        },
+        preco: 360,
+        desconto: 0
+    }
+]

@@ -1,6 +1,6 @@
 import 'swiper/swiper-bundle.css';
 import Produtos from "./components/produtos/produtos-component"
-import { produtos1 } from "./components/produtos/dados"
+import { bestSellingProducts, produtos1 } from "./components/produtos/dados"
 import Categorias from "./components/categorias/categorias-component";
 import { categorias } from "./components/categorias/dados";
 import CarrosselProdutos from './components/carrossel-produtos/carrossel-produtos-component';
@@ -10,6 +10,7 @@ import NavBarLateral from './components/menu/navbar-lateral/navbar-lateral.compo
 import Menu from './components/menu/menu.component';
 import CarrosselBanners from './components/carrossel-banners/carrossel-banners-component';
 import { banners } from './components/carrossel-banners/dados';
+import ButtonUi from './components/button-ui/button-ui-component';
 
 function App() {
 
@@ -28,24 +29,49 @@ function App() {
 
         {/* Seção de produtos com desconto */}
         <div className='-mt-[20px] md:mt-0'>
-        <CarrosselProdutos
-          produtos={produtosComDesconto}
-          tagLabel='Today´s'
-          titulo='Products on Sale'
-        />
+          <CarrosselProdutos
+            produtos={produtosComDesconto}
+            tagLabel='Today´s'
+            titulo='Products on Sale'
+          />
+          <div className='flex sm:justify-center'>
+            <ButtonUi>
+              View All Products
+            </ButtonUi>
+          </div>
         </div>
 
+        <hr className='text-gray-100' />
 
         {/* Seção de categorias */}
         <Categorias categorias={categorias} />
 
-        {/* Seção de produtos */}
-        <Produtos
-          produtos={produtos1}
-          titulo='Explore Our Products'
-          tagLabel='Our Products'
-        />
+        <hr className='text-gray-100' />
 
+        {/* Seção de best sellin produtos */}
+        <div>
+          <Produtos
+            produtos={bestSellingProducts}
+            tagLabel='This Month'
+            titulo='Best Selling Products'
+            button
+          />
+        </div>
+
+        {/* Banner JBL */}
+        <div>
+          <img src='/imagens/diversas/banner-jbl.png' />
+        </div>
+
+        {/* Seção de produtos */}
+        <div>
+          <Produtos
+            produtos={produtos1}
+            titulo='Explore Our Products'
+            tagLabel='Our Products'
+            button
+          />
+        </div>
 
       </div>
       <Rodape />

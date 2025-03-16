@@ -24,7 +24,7 @@ function Navbar({ setMobileMenu }: NavBarProps) {
                 <div>
                     <PiShoppingCartThin className="cursor-pointer text-2xl md:text-3xl" />
                 </div>
-                <div className="rounded-2xl p-1 bg-[#FF0000]">
+                <div className="rounded-2xl p-1 bg-[#DB4444]">
                     <BiUser className="text-[white] md:text-xl cursor-pointer" />
                 </div>
                 <div className="sm:hidden">

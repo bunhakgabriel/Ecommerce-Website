@@ -18,7 +18,7 @@ function CardProduto({ produto, carrossel }: CardProdutoProps) {
             <div className="bg-[#FAFAFA] rounded-[4px] flex">
                 <div className="flex flex-col w-[85%] justify-center">
                     <div className={`${desconto != 0 && desconto ? 'opacity-100' : 'opacity-0'} w-full text-amber-50 p-2`} >
-                        <span className="bg-[#FF0000] px-4 py-[2px] rounded-[4px]" >
+                        <span className="bg-[#DB4444] px-4 py-[2px] rounded-[4px]" >
                             {calcularDescontoPercentual(preco, (desconto || 0))}
                         </span>
                     </div>
@@ -31,7 +31,7 @@ function CardProduto({ produto, carrossel }: CardProdutoProps) {
             </div>
             <h2 className="font-medium" >{nome}</h2>
             <p className="font-medium flex gap-x-2 sm:gap-x-6 flex-wrap">
-                <span className="text-[#FF0000]" >R$ {(preco - (desconto || 0)).toFixed(2)}</span>
+                <span className="text-[#DB4444]" >R$ {(preco - (desconto || 0)).toFixed(2)}</span>
                 {desconto != 0 && desconto && (
                     <span className="text-[gray] line-through" >R${preco.toFixed(2)}</span>
                 )}
