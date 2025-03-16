@@ -22,7 +22,7 @@ function NavbarMobile({ mobileMenu, setMobileMenu }: NavBarMobileProps) {
 
     return (
         <>
-            <div onClick={handleMenu} className={`${mobileMenu ? 'opacity-50' : 'hidden'} bg-black fixed w-screen h-screen z-20`}>
+            <div onClick={handleMenu} className={`${mobileMenu ? 'opacity-50' : 'opacity-0 pointer-events-none'} bg-black fixed w-screen h-screen z-20`}>
             </div>
             <div className={`${mobileMenu ? 'translate-x-0' : 'transform -translate-x-full'} fixed z-30 w-full shadow-lg transition-transform duration-250 ease-in-out flex h-screen`}>
                 <div className="bg-white w-3/4">

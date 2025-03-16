@@ -7,26 +7,33 @@ import CarrosselProdutos from './components/carrossel-produtos/carrossel-produto
 import { produtosComDesconto } from './components/carrossel-produtos/dados';
 import Rodape from './components/rodape/rodape-component';
 import NavBarLateral from './components/menu/navbar-lateral/navbar-lateral.component';
-import Menu from './components/menu/navigation.component';
+import Menu from './components/menu/menu.component';
+import CarrosselBanners from './components/carrossel-banners/carrossel-banners-component';
+import { banners } from './components/carrossel-banners/dados';
 
 function App() {
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div className='relative max-w-[1400px]'>
       <Menu />
 
       <div className="py-2 px-3 sm:p-4 md:px-10 xl:px-30 flex justify-between flex-col gap-10" >
         <div className='mt-10'></div>
 
         {/* Navegação lateral */}
-        <NavBarLateral />
+        <div className='flex gap-10'>
+          <NavBarLateral />
+          <CarrosselBanners imagens={banners} />
+        </div>
 
         {/* Seção de produtos com desconto */}
+        <div className='-mt-[20px] md:mt-0'>
         <CarrosselProdutos
           produtos={produtosComDesconto}
           tagLabel='Today´s'
           titulo='Products on Sale'
         />
+        </div>
 
 
         {/* Seção de categorias */}

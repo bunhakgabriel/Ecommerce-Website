@@ -41,3 +41,24 @@ body {
     padding-bottom: 90px;
   }
 }
+
+.swiper-pagination-bullet {
+  background-color: gray !important; /* Vermelho */
+  width: 8px !important;
+  height: 8px !important;
+  transition: all 0.3s ease;
+  opacity: 1 !important;
+}
+
+/* Cor da bolinha ativa */
+.swiper-pagination-bullet-active {
+  background-color:black !important; /* Preto */
+  opacity: 1; /* Deixa a bolinha ativa destacada */
+}
+
+@media screen and (min-width: 800px) {
+  .swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+  }
+}
