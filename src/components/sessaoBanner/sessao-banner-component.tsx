@@ -7,7 +7,7 @@ interface SessaoBannerProps {
     text: string
 }
 
-function SessaoBanner({ imagem, className, title, text }: SessaoBannerProps) {
+function SessaoBanner({ imagem, className }: SessaoBannerProps) {
     return (
         <div className={`${className} relative`}>
             <img className="h-full w-full" src={imagem.src} alt={imagem.alt} />
